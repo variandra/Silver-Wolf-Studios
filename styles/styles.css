@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "chelsea market";
+  src: url(./fonts/ChelseaMarket-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: chelsea market;
+}
+
+body {
+  background-color: navajowhite;
+}
+
+main {
+  color: black;
+}
+
+h1 {
+  color: darkorange;
+  text-align: center;
+}
+
+h2,
+h3 {
+  color: rgb(32, 216, 0);
+  text-align: center;
+}
+
+.main-grid {
+  display: grid;
+  justify-content: space-evenly;
+  gap: 1px;
+  grid-template-columns: minmax(200px, 500px) minmax(200px, 500px);
+  max-width: 600px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header"
+    "grid-1 grid-2"
+    "footer footer";
+  background-color: rgb(0, 159, 203);
+  border-radius: 25%;
+  border: darkorange 3px double;
+  margin: auto;
+}
+
+.commission-card {
+  grid-auto-flow: row;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.commission-img {
+  width: 100%;
+  background-color: snow;
+  border-radius: 50%;
+  box-shadow: 10px 5px rgba(25, 0, 255, 0.266);
+  height: 200px;
+}
+
+.grid-header {
+  grid-area: header;
+}
+
+.grid-header h2 {
+  color: darkorange !important;
+}
+
+.grid-1 {
+  grid-area: grid-1;
+  justify-self: center;
+  height: 1fr;
+  max-width: 200px;
+  width: 1fr;
+}
+
+.grid-2 {
+  grid-area: grid-2;
+  justify-self: center;
+  height: 1fr;
+  max-width: 200px;
+  width: 1fr;
+}
+
+.grid-footer {
+  grid-area: footer;
+  width: 80%;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  background-color: rgb(23, 1, 168);
+}
+
+footer img {
+  width: 25px;
+}
+
+.footer-text {
+  display: inline;
+  color: white;
+}
