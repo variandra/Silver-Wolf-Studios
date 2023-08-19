@@ -5,22 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Silver Wolf Studios</title>
-    <link rel="stylesheet" href="styles.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    
+
+
   </head>
 
   <body>
-    <header class="header-bio">
-      <h1>Silver Wolf Studios</h1>
-      <h2>My Name is River and I make Fursuits!</h2>
-      <img src="images/Alex Headshot.jpg" alt="Alex Headshot profile picture" />
-      <p>
+    <header class="header-bio header-grid">
+      <h1 class="header-grid1">Silver Wolf Studios</h1>
+      <h2 class="header-grid2">My Name is River and I make Fursuits!</h2>
+      <img class="profile-img" src="images/Alex Headshot.jpg" alt="Alex Headshot profile picture" />
+      <p class="header-grid3">
         I'm an amature fursuit maker trying to start a bussiness as a full time
         maker and artist! I have been making suits for 5 years and drawing since
         I was young. I have an Associates in Graphic Design and love all things
         art.
       </p>
-    </header>
-    <main>
       <section class="main-grid">
         <div class="commission-card grid-header">
           <h2>Commission Status</h2>
@@ -45,6 +50,9 @@
           </p>
         </div>
       </section>
+    </header>
+    <main>
+      
       
       <article>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
@@ -90,7 +98,7 @@
     <form action="" method="post">
       <label for="message">Message me for quotes!</label>
       <input type="text" id="message" />
-      <input type="submit" id="submit-fursuit" />
+      <input type="button" class="btn btn-info" id="submit-fursuit" value="Ask for quote!"/>
     </form>
 
 

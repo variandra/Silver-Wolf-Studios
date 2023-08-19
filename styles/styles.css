@@ -10,6 +10,45 @@
 
 body {
   background-color: navajowhite;
+  padding: 20px;
+}
+
+/* need help getting media quary to work */
+@media  screen and (min-width: 700px) {
+  .header-grid{
+    grid-auto-flow: column;
+    grid-template-areas: none;
+  }
+}
+
+.header-grid{
+  display: grid;
+  grid-template-areas: 
+  "header1 headshot"
+  "header2 headshot"
+  "header3 headshot"
+  "Commision-card headshot";
+}
+
+.header-grid1{
+  grid-area: header1;
+  width: minmax(250px, 500px);
+}
+
+.header-grid2{
+  grid-area: header2;
+  width: minmax(250px, 500px);
+}
+
+.header-grid3{
+  grid-area: header3;
+  width: minmax(250px, 500px);
+}
+
+.profile-img{
+  grid-area: headshot;
+  width: minmax(250px, 500px);
+  height: 600px;
 }
 
 main {
@@ -18,20 +57,25 @@ main {
 
 h1 {
   color: darkorange;
+  margin-bottom: 0px;
+  margin-top: 0px;
   text-align: center;
 }
 
 h2,
 h3 {
   color: rgb(32, 216, 0);
+  margin-bottom: 0px;
+  margin-top: 0px;
   text-align: center;
 }
 
 .main-grid {
+  grid-area: Commision-card;
   display: grid;
   justify-content: space-evenly;
   gap: 1px;
-  grid-template-columns: minmax(200px, 500px) minmax(200px, 500px);
+  grid-template-columns: minmax(250px, 500px) minmax(250px, 500px);
   max-width: 600px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -39,7 +83,7 @@ h3 {
     "grid-1 grid-2"
     "footer footer";
   background-color: rgb(0, 159, 203);
-  border-radius: 25%;
+  border-radius: 15%;
   border: darkorange 3px double;
   margin: auto;
 }
@@ -55,7 +99,6 @@ h3 {
   width: 100%;
   background-color: snow;
   border-radius: 50%;
-  box-shadow: 10px 5px rgba(25, 0, 255, 0.266);
   height: 200px;
 }
 
@@ -67,20 +110,35 @@ h3 {
   color: darkorange !important;
 }
 
+.commission-card h3 {
+  padding-bottom: 20px;
+}
+
 .grid-1 {
   grid-area: grid-1;
   justify-self: center;
-  height: 1fr;
   max-width: 200px;
-  width: 1fr;
 }
 
 .grid-2 {
   grid-area: grid-2;
   justify-self: center;
-  height: 1fr;
   max-width: 200px;
-  width: 1fr;
+}
+
+@keyframes rainbow {
+  0%   {box-shadow: 0px 0px 20px 20px red;}
+  25%  {box-shadow: 0px 0px 20px 20px yellow;}
+  50%  {box-shadow: 0px 0px 20px 20px blue;}
+  75%  {box-shadow: 0px 0px 20px 20px green;}
+  100% {box-shadow: 0px 0px 20px 20px red;}
+}
+
+.grid-1:hover .commission-img ,.grid-2:hover .commission-img {
+  animation-name: rainbow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
 }
 
 .grid-footer {
@@ -90,7 +148,8 @@ h3 {
 
 footer {
   position: sticky;
-  bottom: 0;
+  bottom: 0px;
+  padding: 0px;
   background-color: rgb(23, 1, 168);
 }
 
