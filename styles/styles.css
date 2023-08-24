@@ -114,6 +114,11 @@ h3 {
   padding-bottom: 20px;
 }
 
+.commisions-closed{
+  font-weight: bolder;
+  color: hotpink;
+}
+
 .grid-1 {
   grid-area: grid-1;
   justify-self: center;
