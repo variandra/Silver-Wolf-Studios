@@ -1,9 +1,36 @@
+
+
+// Fade and Slide //
+const items = document.querySelectorAll('.item');
+console.log(items);
+
+
+const options = {
+  threshold: 0.4
+}
+
+function addSlideIn(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('slide-in');
+    }
+  });
+}
+
+const observer = new IntersectionObserver(addSlideIn, options)
+
+items.forEach(item => {
+  observer.observe(item);
+})
+
+
+// Image carousel // 
 const images = document.querySelectorAll('#img-carousel img');
 const previousImage = document.getElementById("prev");
 const nextImage = document.getElementById("next");
 
-let currentIndex = 0;
 
+let currentIndex = 0;
 
 function reset() {
     for (let i = 0; i < images.length; i++) {

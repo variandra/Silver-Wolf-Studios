@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="./styles/styles.css" />
 
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script defer type="text/javascript" src="./js/main.js"></script>
   </head>
 
   <body>
@@ -48,21 +48,23 @@
       </ul>
     </nav>
 
-    <header class="header-bio header-grid">
+    <header class="header-bio header-grid" >
+      <div class="item right">
       <h1 class="header-grid1">Silver Wolf Studios</h1>
       <h2 class="header-grid2">My Name is River and I make Fursuits!</h2>
+      </div>
       <img
-        class="profile-img"
+        class="profile-img item left"
         src="images/Alex Headshot.jpg"
         alt="Alex Headshot profile picture"
       />
-      <p class="header-grid3">
+      <p class="header-grid3 item right">
         I'm an amature fursuit maker trying to start a bussiness as a full time
         maker and artist! I have been making suits for 5 years and drawing since
         I was young. I have an Associates in Graphic Design and love all things
         art.
       </p>
-      <section class="main-grid">
+      <section class="main-grid item right">
         <div class="commission-card grid-header">
           <h2>Commission Status</h2>
         </div>
@@ -94,7 +96,7 @@
         </div>
       </section>
     </header>
-    <main>
+    <main class="item left">
       <article>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
         eligendi quasi dolore maxime sed recusandae delectus deleniti aperiam

@@ -10,6 +10,7 @@
 
 body {
   background-color: navajowhite;
+  overflow-x: hidden;
   padding: 20px;
 }
 
@@ -167,6 +168,8 @@ footer img {
   color: white;
 }
 
+/* Image carousel */
+
 .carousel-wrapper{
   display: flex;
   justify-content: center;
@@ -221,4 +224,28 @@ footer img {
 #img-carousel button#next {
   right: -35px;
   padding: 7px 15px 7px 17px;
+}
+
+
+/* Slide in and Fade */
+
+.item {
+  opacity: 0;
+  transition: opacity 0s, transform 0s;
+}
+
+.left {
+  transform-origin: left center;
+  transform: translateX(-50%);
+}
+
+.right {
+  transform-origin: right center;
+  transform: translateX(50%);
+}
+
+.slide-in {
+  opacity: 1 !important;
+  transform: translateX(0);
+  transition: opacity 1.5s, transform 1.5s;
 }
